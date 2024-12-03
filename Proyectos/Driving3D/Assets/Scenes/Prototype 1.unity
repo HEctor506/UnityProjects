@@ -222,7 +222,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 451980224}
+  m_LookAt: {fileID: 1509780411}
   m_Follow: {fileID: 1509780411}
   m_Lens:
     FieldOfView: 60.000004
@@ -496,9 +496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc1db38ada77504f8f3ce95ee964b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaculosPrefab: {fileID: 1884074337756752357, guid: cb04eea70ee14ab49b68d12e2cbbf680, type: 3}
-  randomx: 0
-  randomy: 0
 --- !u!4 &490088172
 Transform:
   m_ObjectHideFlags: 0
