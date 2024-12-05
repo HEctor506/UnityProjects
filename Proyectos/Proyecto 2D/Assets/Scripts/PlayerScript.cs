@@ -17,10 +17,15 @@ public class PlayerScript : MonoBehaviour
     public Vector3 dimensionesCaja; //nos da la informacion si estamos sobre el suelo o no
     public bool enSuelo; //si estamos en el suelo
     public bool salto = false; //si es que podemos saltar
+
+    [Header("Pasar muros")]
+
+    private Transform distanciaJugador;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        distanciaJugador = GetComponent<Transform>();   
     }
 
     // Update is called once per frame
@@ -33,6 +38,7 @@ public class PlayerScript : MonoBehaviour
         {
             salto = true;
         } 
+        pasoElMuero();
         
     }
 
@@ -75,6 +81,19 @@ public class PlayerScript : MonoBehaviour
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 
+    private void pasoElMuero()
+    {
+        float ubicacion = distanciaJugador.position.x;
+        // Verifica si la posición X del GameObject es mayor a 25
+        if(ubicacion > 39)
+        {
+            // Cambia su posición a (0, y, z), manteniendo las coordenadas actuales de Y y Z
+            distanciaJugador.position = new Vector3(-39f, distanciaJugador.position.y, distanciaJugador.position.z);          
+
+        }else if(ubicacion < -39){
+            distanciaJugador.position = new Vector3(39, distanciaJugador.position.y, distanciaJugador.position.z); 
+        }
+    }
 
 
     public void OnDrawGizmos()
