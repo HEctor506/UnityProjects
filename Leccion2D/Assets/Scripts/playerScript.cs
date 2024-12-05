@@ -97,7 +97,7 @@ public class playerScript : MonoBehaviour
 
     public void gameOver()
     {
-        if(miTransform.position.y < -8)
+        if(miTransform.position.y < -20)
         {
             gameOverScreen.SetActive(true);
         }
