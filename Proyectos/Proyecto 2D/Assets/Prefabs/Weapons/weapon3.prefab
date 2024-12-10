@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767004150109261963}
   - component: {fileID: 6351356825810368321}
+  - component: {fileID: 2346845080202517010}
   m_Layer: 0
   m_Name: weapon3
   m_TagString: Untagged
@@ -88,6 +89,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2346845080202517010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831495208830727376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f3acffd67919f47bcb203d2ccf818e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controladorDisparo: {fileID: 7777534114055536594}
+  distanciaLinea: 25
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 64
+  jugadorEnRango: 0
+  tiempoEntreDisparo: 3
+  tiempoUltimoDisparo: 0
+  balaEnemigo: {fileID: 9197689200846202914, guid: 941fec3b5fb651f489e5402d1df74d15, type: 3}
+  tiempoEsperaDisparo: 0
 --- !u!1 &8734030723706294798
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 8734030723706294798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.08, y: 0.34, z: 0}
+  m_LocalPosition: {x: 3.56, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7503258852642280953}
   - component: {fileID: 4994674647660354939}
   - component: {fileID: 305187846106042132}
-  m_Layer: 0
+  - component: {fileID: 6992716477444636898}
+  m_Layer: 6
   m_Name: jugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,8 +178,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.025541306, y: -2.8372688}
-  m_Size: {x: 3.162599, y: 5.1887836}
+  m_Offset: {x: -0.04787922, y: -2.8372688}
+  m_Size: {x: 3.6031208, y: 5.1887836}
   m_Direction: 0
 --- !u!114 &4994674647660354939
 MonoBehaviour:
@@ -217,6 +218,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
   weaponHolder: {fileID: 4054070935322500730}
+--- !u!114 &6992716477444636898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076500007278661944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51aa9fffd692c3f43a51f614a56eaccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantidadDeVida: 5
 --- !u!1 &5978350124025174256
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 5978350124025174256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -4.36, z: 0}
+  m_LocalPosition: {x: 0.25, y: -4.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

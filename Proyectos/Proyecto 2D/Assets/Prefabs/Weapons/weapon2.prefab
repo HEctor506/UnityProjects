@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2931136494317658807}
   - component: {fileID: 7490537122899519751}
+  - component: {fileID: 4880367800489450899}
   m_Layer: 0
   m_Name: weapon2
   m_TagString: Untagged
@@ -88,6 +89,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4880367800489450899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702185106019636366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45337e26bcabb454eba8c55775a7486e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponItemPrefab: {fileID: 9174011335088631190, guid: 53727a91ea78f614186826c0d21ce5ea, type: 3}
+  maxCooldownTime: 0.4
+  damage: 1
+  camera: {fileID: 0}
+  spawner: {fileID: 7352433570675445751}
+  bulletPrefab: {fileID: 6787167374646617081, guid: 1ec555697165435478e83c5e362f4c52, type: 3}
 --- !u!1 &6938822099441945099
 GameObject:
   m_ObjectHideFlags: 0

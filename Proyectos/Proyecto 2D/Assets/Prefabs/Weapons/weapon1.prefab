@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281960560169429184}
   - component: {fileID: 4673577331250921550}
-  - component: {fileID: 5654111113109189918}
+  - component: {fileID: 8308279529547523818}
   m_Layer: 0
   m_Name: weapon1
   m_TagString: Untagged
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5654111113109189918
+--- !u!114 &8308279529547523818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,14 +98,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1454962279804919377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c267c918abf2e0e4d86fc77857e571c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 45337e26bcabb454eba8c55775a7486e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponItemPrefab: {fileID: 4944722644221324559, guid: 364b2cecbb0d1ea4c8b8fea77503a25c, type: 3}
-  maxCooldownTime: 1
+  weaponItemPrefab: {fileID: 0}
+  maxCooldownTime: 0.4
   damage: 1
-  hitSpot: {fileID: 2235385529142069525}
-  range: 0.6
+  camera: {fileID: 0}
+  spawner: {fileID: 0}
+  bulletPrefab: {fileID: 0}
 --- !u!1 &8182212214880410609
 GameObject:
   m_ObjectHideFlags: 0
