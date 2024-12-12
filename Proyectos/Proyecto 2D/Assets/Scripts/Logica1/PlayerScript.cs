@@ -17,6 +17,8 @@ public class PlayerScript : MonoBehaviour
     public Vector3 dimensionesCaja; //nos da la informacion si estamos sobre el suelo o no
     public bool enSuelo; //si estamos en el suelo
     public bool salto = false; //si es que podemos saltar
+    [SerializeField] private int saltosExtraRestantes;
+    [SerializeField] private int saltosExtra; 
 
     [Header("Pasar muros")]
 
@@ -33,6 +35,9 @@ public class PlayerScript : MonoBehaviour
     {
         moveHorizontal = Input.GetAxis("Horizontal") * velocidadMovimiento;
         
+        if(enSuelo){
+            saltosExtraRestantes = saltosExtra;
+        }
 
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -50,27 +55,44 @@ public class PlayerScript : MonoBehaviour
 
         salto  = false;
     }
-
     public void mover(float mover, bool saltar)
     {
-        Vector3 velocidadObjectivo = new Vector2(mover, rb2D.linearVelocity.y);
-        rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjectivo,
-                            ref velocidad, suavizadoMovimiento); 
+        // Movimiento horizontal
+        Vector3 velocidadObjetivo = new Vector2(mover, rb2D.linearVelocity.y);
+        rb2D.linearVelocity = Vector3.SmoothDamp(rb2D.linearVelocity, velocidadObjetivo,
+                                            ref velocidad, suavizadoMovimiento);
 
-        if(mover > 0 && !mirandoDerecha){
+        if (mover > 0 && !mirandoDerecha)
+        {
             Girar();
-
-        }else if(mover < 0 && mirandoDerecha){
+        }
+        else if (mover < 0 && mirandoDerecha)
+        {
             Girar();
         }
 
-        if(enSuelo && saltar)
+        // Saltar
+        if (saltar)
         {
-            enSuelo = false;
-            rb2D.AddForce(new Vector2(0f, fuerzaSalto));
-            
+            if (enSuelo)
+            {
+                Salto(); // Salto desde el suelo
+            }
+            else if (saltosExtraRestantes > 0)
+            {
+                Salto(); // Salto adicional
+                saltosExtraRestantes--;
+            }
         }
     }
+    
+    private void Salto()
+    {
+        rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x, 0f); // Resetear la velocidad vertical
+        rb2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse); // Añadir fuerza al salto
+    }
+
+
 
     private void Girar()
     {

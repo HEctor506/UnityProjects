@@ -5,9 +5,14 @@ public class WeaponSystem
     public int MaxAmmo { get; private set; }
     public int CurrentAmmo { get; private set; }
 
+    public bool isAmmoAtMax
+    {
+        get => this.CurrentAmmo == this.MaxAmmo;
+    }
+
     public WeaponSystem(int maxAmmo)
     {
-        MaxAmmo = maxAmmo;
+        this.MaxAmmo = maxAmmo;
         CurrentAmmo = maxAmmo; // Se inicia con munición llena
     }
 
@@ -27,6 +32,16 @@ public class WeaponSystem
         {
             Debug.Log("¡Sin munición! Recarga.");
         }
+    }
+
+    public bool tryToRecharge(int amount)
+    {
+        if(isAmmoAtMax)
+            return false;   
+
+        this.CurrentAmmo += amount;
+        Debug.Log("¡Recarga completada!");
+        return true;
     }
 
     public void Reload()

@@ -10,6 +10,9 @@ public class GunWeapon : Weapon
     public Transform spawner;
     public GameObject bulletPrefab;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip fireShootSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +25,7 @@ public class GunWeapon : Weapon
     {
 
         HandleShooting();
-        ReloadWeapon();
+        // ReloadWeapon();
     }
 
 
@@ -30,11 +33,13 @@ public class GunWeapon : Weapon
     public void HandleShooting()
     {
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             if (weaponSystem.CanShoot())
             {
                 Shoot();
+                //Reproducir sonido de disparo
+                SoundManager.instance.PlaySound(fireShootSound);
             }
             else
             {
@@ -53,13 +58,10 @@ public class GunWeapon : Weapon
         Destroy(bullet, 4f);
     }
 
-    public void ReloadWeapon()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            weaponSystem.Reload();
-        }
-    }
+    // public void ReloadWeapon()
+    // {
+    //     weaponSystem.Reload();
+    // }
 
 
     //necesito la logica de agarrar el arma con el teclado flecha abajo

@@ -107,6 +107,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   spawner: {fileID: 5621077251314134868}
   bulletPrefab: {fileID: 1754749421882036617, guid: bd3009b5650a58b46812ed1182b70b7b, type: 3}
+  fireShootSound: {fileID: 8300000, guid: 4945769fa0f1f2c44aa64d377b36f5df, type: 3}
 --- !u!1 &7913306353635856379
 GameObject:
   m_ObjectHideFlags: 0

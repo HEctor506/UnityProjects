@@ -25,7 +25,7 @@ public class Weapon_Manager2 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && this.weapons.Count > 1)
+        if (Input.GetKeyDown(KeyCode.X) && this.weapons.Count > 1)
         {
             // Cambiar entre las armas
             currentWeaponIndex = (currentWeaponIndex + 1) % this.weapons.Count;
@@ -63,6 +63,11 @@ public class Weapon_Manager2 : MonoBehaviour
         {
             EquipWeapon(0); // Equipar automáticamente si es la primera arma.
         }
+    }
+
+    public Weapon GetCurrentWeapon()
+    {
+        return this.weapons[currentWeaponIndex];
     }
 
     private void EquipWeapon(int index)
