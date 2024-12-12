@@ -11,18 +11,16 @@ public class playerScript : MonoBehaviour
     [Range(0, 0.3f)] public float suavizadoMovimiento;
     private Vector3 velocidad = Vector3.zero;
     private bool mirandoDerecha = true;
-
-
+    private int vidas = 3;
 
     [Header("Animacion")]
     public Animator animator;
 
     [Header("Score")]
-    public int playerScore = 0;
+    private int playerScore = 0;
     public Text scoreText;
 
     public GameObject gameOverScreen;
-    public Transform miTransform;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,9 +49,7 @@ public class playerScript : MonoBehaviour
 
         // Actualizar la animación
         animator.SetFloat("Horizontal", Mathf.Abs(moveHorizontal));
-
-        // Verificar condiciones de Game Over
-        // gameOver();
+        
     }
 
     public void FixedUpdate()
@@ -89,12 +85,19 @@ public class playerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Coin"){
+        if (other.gameObject.tag == "moneda"){
             addScore();
-            Debug.Log(other.transform.name);
-            other.gameObject.GetComponent<Animator>().SetTrigger("Collected");
-            Destroy(other.gameObject, 1f);
-            
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "bomb")
+        {
+            this.vidas-=1;
+            if (this.vidas < 0)
+            {
+                Destroy(gameObject);
+                gameOver();
+            }
         }
 
     }
@@ -104,29 +107,10 @@ public class playerScript : MonoBehaviour
         scoreText.text = playerScore.ToString();
     }
 
-    public void restarGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
 
     public void gameOver()
     {
-        if(miTransform.position.y < -10)
-        {
-            gameOverScreen.SetActive(true);
-        }
-
+        gameOverScreen.SetActive(true);
     }
-
-    // private void OnCollisionEnter2D(Collision2D collision){
-
-    //     //Verifica si el objecto con el que colisionanste es el de interes
-    //     if  (collision.gameObject == this.platform)
-    //     {
-    //             Debug.Log("Colisión! Listo para bajar");
-    //     }
-    // }
-
 
 }
