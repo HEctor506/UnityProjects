@@ -92,7 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4be8bdc11f5f04bb518f908b6153d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 10
+  ammoAmount: 10
+  reloadGunSound: {fileID: 8300000, guid: 3ddb17d1daf1a7144bf02885cda896c4, type: 3}
 --- !u!1 &4609922997918418615
 GameObject:
   m_ObjectHideFlags: 0

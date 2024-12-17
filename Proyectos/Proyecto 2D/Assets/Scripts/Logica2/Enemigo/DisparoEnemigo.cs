@@ -37,6 +37,8 @@ public class DisparoEnemigo : MonoBehaviour
 
     private void OnDrawGizmos(){
         Gizmos.color = Color.red;   
-        Gizmos.DrawLine(controladorDisparo.position, controladorDisparo.position + transform.right * distanciaLinea) ;
+        Gizmos.DrawLine(controladorDisparo.position, controladorDisparo.position + transform.right * distanciaLinea);
+          
     }
+
 }

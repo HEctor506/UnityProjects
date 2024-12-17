@@ -5,6 +5,9 @@ public class AmmoItem : MonoBehaviour
 {
     public int ammoAmount = 5; // Cantidad de munición que este ítem proporciona
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip reloadGunSound;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Buscar el Weapon Manager del jugador
@@ -21,16 +24,16 @@ public class AmmoItem : MonoBehaviour
             Debug.Log("Verificar si el jugador tiene un arma equipada");
             return;
         }
-        // Verificar si el arma equipada puede recargar munición
-        GunWeapon gunWeapon = currentWeapon as GunWeapon;
-        if (gunWeapon == null || gunWeapon.weaponSystem.isAmmoAtMax){
+
+        if (currentWeapon.weaponSystem.isAmmoAtMax){
             Debug.Log("Verificar si el arma equipada puede recargar munición");
             return;
         }
         // Recargar munición y destruir el ítem
-        if (gunWeapon.weaponSystem.tryToRecharge(ammoAmount))
+        if (currentWeapon.weaponSystem.tryToRecharge(ammoAmount))
         {
             Debug.Log($"Recargada munición con {ammoAmount} balas.");
+            SoundManager.instance.PlaySound(reloadGunSound); //Reproducir sonido de recarga
             Destroy(this.gameObject); // Eliminar el ítem después de usarlo
         }
     }

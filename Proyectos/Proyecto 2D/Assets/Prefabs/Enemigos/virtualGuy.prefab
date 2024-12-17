@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5955723704257933814}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.57, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1957997087812143831}
   m_Layer: 7
   m_Name: virtualGuy
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa9fffd692c3f43a51f614a56eaccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadDeVida: 5
+  maxHealth: 5
+  currentHealth: 0
+  prefabMuerte: {fileID: 5334615139739363000, guid: 8080715fd86aef841a548bd61cb7805b, type: 3}
 --- !u!114 &7135677421245096102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,10 +179,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 10
-  distancia: 4
+  distancia_pared: 6
+  distancia_jugador: 6
   queEsSuelo:
     serializedVersion: 2
     m_Bits: 8
+  queEsJugador:
+    serializedVersion: 2
+    m_Bits: 64
+  enFrente_jugador: {fileID: 2903966355861338365}
 --- !u!70 &1957997087812143831
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -265,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 767004150109261963, guid: eed65ccdf833ca148bea8950770949b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346845080202517010, guid: eed65ccdf833ca148bea8950770949b7, type: 3}
+      propertyPath: distanciaLinea
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6831495208830727376, guid: eed65ccdf833ca148bea8950770949b7, type: 3}
       propertyPath: m_Name

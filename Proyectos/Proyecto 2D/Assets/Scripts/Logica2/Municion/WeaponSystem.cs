@@ -40,13 +40,9 @@ public class WeaponSystem
             return false;   
 
         this.CurrentAmmo += amount;
-        Debug.Log("¡Recarga completada!");
+        // Debug.Log("¡Recarga completada!");
         return true;
     }
 
-    public void Reload()
-    {
-        CurrentAmmo = MaxAmmo;
-        Debug.Log("¡Recarga completada!");
-    }
+
 }

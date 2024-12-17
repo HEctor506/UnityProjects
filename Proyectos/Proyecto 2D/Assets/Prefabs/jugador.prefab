@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7503258852642280953}
   - component: {fileID: 4994674647660354939}
   - component: {fileID: 305187846106042132}
-  - component: {fileID: 6992716477444636898}
   m_Layer: 6
   m_Name: jugador
   m_TagString: Player
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.7, y: -12.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.97363627, y: 0.97363627, z: 0.97363627}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7675958479388735935}
@@ -178,8 +177,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.04787922, y: -2.8372688}
-  m_Size: {x: 3.6031208, y: 5.1887836}
+  m_Offset: {x: -0.047879186, y: -2.878443}
+  m_Size: {x: 3.6031187, y: 5.2711315}
   m_Direction: 0
 --- !u!114 &4994674647660354939
 MonoBehaviour:
@@ -196,7 +195,7 @@ MonoBehaviour:
   rb2D: {fileID: 7044120404509671801}
   velocidadMovimiento: 800
   suavizadoMovimiento: 0.157
-  fuerzaSalto: 1700
+  fuerzaSalto: 30
   queEsSuelo:
     serializedVersion: 2
     m_Bits: 8
@@ -204,6 +203,14 @@ MonoBehaviour:
   dimensionesCaja: {x: 1.7, y: 0.3, z: 0}
   enSuelo: 0
   salto: 0
+  saltosExtraRestantes: 0
+  saltosExtra: 1
+  velocidadRebote: 10
+  cespedSound: {fileID: 0}
+  muerteSound: {fileID: 8300000, guid: 1ec85483033d39f4e9b3a14600c7563c, type: 3}
+  MaxHealth: 20
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!114 &305187846106042132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,21 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eaadd57fdadae489597c347526f977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 0}
+  weapons: []
   weaponHolder: {fileID: 4054070935322500730}
---- !u!114 &6992716477444636898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076500007278661944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51aa9fffd692c3f43a51f614a56eaccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidadDeVida: 5
 --- !u!1 &5978350124025174256
 GameObject:
   m_ObjectHideFlags: 0
