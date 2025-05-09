@@ -1,0 +1,4 @@
+repository "Rise of the regions/Rise of the regions@4674003126158@cloud"
+  path "/"
+    br "/main"
+    co "/main"

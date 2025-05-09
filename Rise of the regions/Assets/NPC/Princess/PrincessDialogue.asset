@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: PrincessDialogue
+  m_EditorClassIdentifier: 
+  npcName: Princess
+  npcPortrait: {fileID: 21300000, guid: 49939d30f3a96f34483facde6bfce5f0, type: 3}
+  dialogueLines:
+  - Hi!
+  - Do you need something?
+  - Well I'm too busy - bye
+  - Are you sure?
+  - Ok! Bye
+  autoProgressLines: 010101
+  endDialogueLines: 0000010001
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Yes
+    - No
+    nextDialogueIndexes: 0200000003000000
+  - dialogueIndex: 3
+    choices:
+    - Yes, I am sure
+    - I don't know
+    nextDialogueIndexes: 0400000002000000

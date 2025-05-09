@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/VentanaPrincipal.unity
+    guid: d4fad603cf7ce014d80f2f7c1ff83c24
+  - enabled: 1
+    path: Assets/Scenes/VistaNiveles.unity
     guid: 45dd01eef164262488eeea04ced37764
   - enabled: 1
     path: Assets/Scenes/SierraNivel.unity
     guid: c70c5d5936f527a4388ba155daef0acd
+  - enabled: 1
+    path: Assets/Scenes/Amazonia.unity
+    guid: 7ef0b4b12bb0b7a4faace3433b88a8e3
+  - enabled: 1
+    path: Assets/Scenes/Costa.unity
+    guid: 3f212aba93cc6e24fbf4f5482cb997dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

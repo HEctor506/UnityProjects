@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Diagnostics;
 
 public class SceneLoadManager : MonoBehaviour
 {
@@ -15,17 +14,14 @@ public class SceneLoadManager : MonoBehaviour
     public float fadeDuration = 1f;
     public string nextSceneName;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(LoadSequence());
-        
     }
 
     IEnumerator LoadSequence()
     {
-        // Ocultar LoadbarCanvas al inicio
+        // Ocultar barra de carga
         loadbarCanvas.alpha = 0;
         loadbarCanvas.interactable = false;
         loadbarCanvas.blocksRaycasts = false;
@@ -38,7 +34,7 @@ public class SceneLoadManager : MonoBehaviour
         // Fade a negro
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
 
-        // Cambiar canvas
+        // Cambiar canvas: ocultar estudio y mostrar barra
         studioCanvas.alpha = 0;
         loadbarCanvas.alpha = 1;
         loadbarCanvas.interactable = true;
@@ -47,23 +43,36 @@ public class SceneLoadManager : MonoBehaviour
         // Fade desde negro a visible
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
 
-        // Barra de carga
-        float progress = 0f;
-        while (progress < 1f)
+        // Empezar carga de escena real
+        AsyncOperation operacion = SceneManager.LoadSceneAsync(nextSceneName);
+
+        operacion.allowSceneActivation = false; // Evita que cargue automáticamente
+
+        while (operacion.progress < 0.9f)
         {
-            progress += Time.deltaTime / 2f;
-            loadingSlider.value = progress;
+            loadingSlider.value = Mathf.Clamp01(operacion.progress / 0.9f);
             yield return null;
         }
 
-        SceneManager.LoadScene(nextSceneName);
-    }
+        // Llenar hasta el 100%
+        float progreso = 0.9f;
+        while (progreso < 1f)
+        {
+            progreso += Time.deltaTime;
+            loadingSlider.value = Mathf.Clamp01(progreso);
+            yield return null;
+        }
 
+        // Fade out final antes de activar la escena
+        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
+
+        operacion.allowSceneActivation = true;
+    }
 
     IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration)
     {
         float elapsed = 0f;
-        while(elapsed < duration)
+        while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
             cg.alpha = Mathf.Lerp(start, end, elapsed / duration);
@@ -71,15 +80,7 @@ public class SceneLoadManager : MonoBehaviour
         }
         cg.alpha = end;
 
-        //Ajustar interactuabilidad
         cg.interactable = end == 1;
         cg.blocksRaycasts = end == 1;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

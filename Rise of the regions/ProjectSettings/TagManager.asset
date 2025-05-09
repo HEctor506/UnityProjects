@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Costa
+  - Sierra
+  - Oriente
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -43,6 +47,30 @@ TagManager:
     locked: 0
   - name: Fondo
     uniqueID: 567459829
+    locked: 0
+  - name: Luciernagas
+    uniqueID: 1485012779
+    locked: 0
+  - name: Ground
+    uniqueID: 1280300113
+    locked: 0
+  - name: WalkInFront
+    uniqueID: 236197763
+    locked: 0
+  - name: Collision
+    uniqueID: 3327700377
+    locked: 0
+  - name: Player
+    uniqueID: 739214213
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 2923568535
+    locked: 0
+  - name: Decor
+    uniqueID: 2400797953
+    locked: 0
+  - name: Object
+    uniqueID: 3912180883
     locked: 0
   m_RenderingLayers:
   - Default
