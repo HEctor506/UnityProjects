@@ -10,19 +10,20 @@ public class MovementJoystick : MonoBehaviour
     private Vector2 joystickOriginalPos;
     private float joystickRadious;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         joystickOriginalPos = joystickBG.transform.position;
         joystickRadious = joystickBG.GetComponent<RectTransform>().sizeDelta.y / 4;
-        
     }
 
-    public void PointerDown()
+    public void PointerDown(BaseEventData baseEventData)
     {
-        joystick.transform.position = Input.mousePosition;
-        joystickBG.transform.position = Input.mousePosition;
-        joystickTouchPos = Input.mousePosition;
+        PointerEventData pointerEventData = baseEventData as PointerEventData;
+        Vector2 inputPosition = pointerEventData.position;
+
+        joystick.transform.position = inputPosition;
+        joystickBG.transform.position = inputPosition;
+        joystickTouchPos = inputPosition;
     }
 
     public void Drag(BaseEventData baseEventData)
@@ -33,7 +34,7 @@ public class MovementJoystick : MonoBehaviour
 
         float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
 
-        if(joystickDist < joystickRadious)
+        if (joystickDist < joystickRadious)
         {
             joystick.transform.position = joystickTouchPos + joystickVec * joystickDist;
         }
@@ -49,6 +50,4 @@ public class MovementJoystick : MonoBehaviour
         joystick.transform.position = joystickOriginalPos;
         joystickBG.transform.position = joystickOriginalPos;
     }
-
-    
 }

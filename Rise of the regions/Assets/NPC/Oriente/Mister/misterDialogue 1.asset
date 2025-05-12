@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: misterDialogue 1
+  m_EditorClassIdentifier: 
+  npcName: Robot
+  npcPortrait: {fileID: 21300000, guid: 8c19e29195ef8104b91e4fb91f6cadbb, type: 3}
+  dialogueLines:
+  - We used to hear birds at dawn and frogs at night.
+  - "Now there's silence\u2014and fresh stumps in the soil."
+  - I saw lights in the forest. Outsiders, with axes.
+  - Do we confront them or find another way?
+  - That's right!!!
+  - Promotes community action
+  - 'Violent and risky '
+  - Avoidant response
+  autoProgressLines: 0101010101010101
+  endDialogueLines: 0000000000010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 3
+    choices:
+    - Scare them off by force.
+    - You could organize peaceful patrols and report the activity.
+    - "Don\u2019t get involved. It\u2019s not your fight."
+    nextDialogueIndexes: 060000000400000007000000

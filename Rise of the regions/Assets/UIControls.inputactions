@@ -1,0 +1,155 @@
+{
+    "name": "UIControls",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "3c921eb7-6074-431d-913e-27c66c238740",
+            "actions": [
+                {
+                    "name": "Navigate",
+                    "type": "Value",
+                    "id": "5cc556e1-1dec-420d-adf9-af166c5674c9",
+                    "expectedControlType": "Vector2"
+                },
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "90efc220-4c87-4f60-bbd7-32e346079a75",
+                    "expectedControlType": "Button"
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "786dd57b-f2f3-424e-98f6-f67bef3837b3",
+                    "expectedControlType": "Button"
+                },
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "2a9c0391-ddf3-4eed-8ad2-52b9fa75f702",
+                    "expectedControlType": "Vector2"
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "665cf5a6-9839-4804-b00e-32b904151be5",
+                    "expectedControlType": "Button"
+                },
+                {
+                    "name": "ScrollWheel",
+                    "type": "Value",
+                    "id": "fb93b264-91cb-45a0-b59d-8241c3e3ce83",
+                    "expectedControlType": "Vector2"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Gamepad",
+                    "id": "00bd609e-878c-4fa6-a2fb-aea895663315",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Navigate",
+                    "isComposite": true
+                },
+                {
+                    "name": "up",
+                    "id": "8038e7c7-64c4-4c6b-ac40-0953863baf52",
+                    "path": "<Gamepad>/leftStick/up",
+                    "action": "Navigate",
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "34f92ac3-b4f4-4ce5-b1b6-31599ed9396c",
+                    "path": "<Gamepad>/leftStick/down",
+                    "action": "Navigate",
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "8d701965-aaef-4aed-8443-982feaf4edf8",
+                    "path": "<Gamepad>/leftStick/left",
+                    "action": "Navigate",
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5ffb0ff1-828f-431c-a335-def8ab882a98",
+                    "path": "<Gamepad>/leftStick/right",
+                    "action": "Navigate",
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a0d024e2-9417-49df-8d95-7521c1001af5",
+                    "path": "<Keyboard>/enter",
+                    "action": "Submit"
+                },
+                {
+                    "name": "",
+                    "id": "70dced1b-8327-4be7-b2be-3ee46def4881",
+                    "path": "<Touchscreen>/press",
+                    "action": "Submit"
+                },
+                {
+                    "name": "",
+                    "id": "999ac6e5-1fca-40a4-a32e-2095078b5119",
+                    "path": "<Keyboard>/escape",
+                    "action": "Cancel"
+                },
+                {
+                    "name": "",
+                    "id": "c225958a-e0b0-4236-ac14-346958a83e35",
+                    "path": "<Pointer>/position",
+                    "action": "Point"
+                },
+                {
+                    "name": "",
+                    "id": "1bb230bf-b06e-4c2e-8a78-30afda43fdd6",
+                    "path": "<Pointer>/press",
+                    "action": "Click"
+                },
+                {
+                    "name": "",
+                    "id": "91c6cdea-196c-4ab7-82a8-4147fec2af96",
+                    "path": "<Mouse>/scroll",
+                    "action": "ScrollWheel"
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard&Mouse",
+            "bindingGroup": "Keyboard&Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>"
+                },
+                {
+                    "devicePath": "<Mouse>"
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>"
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "bindingGroup": "Touch",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>"
+                }
+            ]
+        }
+    ]
+}

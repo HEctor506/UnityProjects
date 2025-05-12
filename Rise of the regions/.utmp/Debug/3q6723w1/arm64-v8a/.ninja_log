@@ -1,0 +1,23 @@
+# ninja log v5
+2	6324	7685686876214065	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	301db4640fd43a1
+312	5203	7685686864930853	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	cffa3c3d793c48cd
+303	5908	7685686872019639	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c40a2a6717117d98
+53	5856	7685686871368618	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	213d01422bbdf3a2
+109	5883	7685686871459781	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4eb4041c72b7f653
+41	5995	7685686873063687	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ba05af289325bf0a
+203	5915	7685686871811317	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	f35a556a184595f7
+98	5930	7685686872280107	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aca3741028de4318
+119	6168	7685686874634592	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6f2792b03180e965
+5206	6276	7685686875727477	C:/Users/HECTOR/Documents/GitHub/UnityProjects/Rise of the regions/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3q6723w1/obj/arm64-v8a/libswappywrapper.so	6d55846467bfb8ff
+6324	6513	7685686878330651	C:/Users/HECTOR/Documents/GitHub/UnityProjects/Rise of the regions/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3q6723w1/obj/arm64-v8a/libgame.so	dd806b65b44cd77e
+161	786	7686058723686410	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	cffa3c3d793c48cd
+787	1585	7686058732383841	C:/Users/HECTOR/Documents/GitHub/UnityProjects/Rise of the regions/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3q6723w1/obj/arm64-v8a/libswappywrapper.so	6d55846467bfb8ff
+140	2580	7686058742154776	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4eb4041c72b7f653
+35	2591	7686058742381264	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	213d01422bbdf3a2
+152	2623	7686058742792851	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c40a2a6717117d98
+108	2629	7686058742431938	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	f35a556a184595f7
+60	2692	7686058743519507	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ba05af289325bf0a
+88	2754	7686058744107017	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aca3741028de4318
+124	2848	7686058745179797	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6f2792b03180e965
+21	2904	7686058745655051	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	301db4640fd43a1
+2905	3123	7686058747984799	C:/Users/HECTOR/Documents/GitHub/UnityProjects/Rise of the regions/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3q6723w1/obj/arm64-v8a/libgame.so	dd806b65b44cd77e

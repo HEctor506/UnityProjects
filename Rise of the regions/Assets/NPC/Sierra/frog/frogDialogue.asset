@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: frogDialogue
+  m_EditorClassIdentifier: 
+  npcName: Frog
+  npcPortrait: {fileID: 21300000, guid: 1ef5f8eaa36a413479f5cd513c87955f, type: 3}
+  dialogueLines:
+  - I hope you've enjoyed this as much as I do
+  - You are one step away to finish this level
+  - Get ready!!
+  - "The forest is shrinking\u2026 goats eat the seedlings."
+  - They depend on goats to survive.
+  - Should we stop the local farmers?
+  - Sorry, that is incorrect
+  - "You\u2019re right. Cooperation beats conflict"
+  - "Let\u2019s meet with the community leaders."
+  - So, get ready for the next and last question!
+  - So what should we do to protect the forest or protect the farmers?
+  - I am proud of you.. You have passed the test
+  - I expected you to be better :((
+  autoProgressLines: 01010101010101010101010101
+  endDialogueLines: 00000000000001000000000101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 5
+    choices:
+    - Work with them to build protected reforestation zones
+    - Ban goats entirely.
+    - "Let the forest disappear, it\u2019s too late."
+    nextDialogueIndexes: 070000000600000006000000
+  - dialogueIndex: 10
+    choices:
+    - "If the farmers can\u2019t adapt, that\u2019s their problem."
+    - There has to be a way to protect both.
+    - The forest will grow back on its own. Leave it be.
+    nextDialogueIndexes: 0c0000000b0000000c000000

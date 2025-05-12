@@ -313,35 +313,11 @@ MonoBehaviour:
     m_ActionId: f435ff93-d4af-4aca-8075-9f05e2d869ec
     m_ActionName: movement/Input
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3432186654830056624}
-        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
-        m_MethodName: OnTouchInteract
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 77aa15fa-d391-49e1-8f4b-994407a880c8
     m_ActionName: movement/TouchInteract
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3432186654830056624}
-        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
-        m_MethodName: OnInteract
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: cea793d3-52c6-49bb-93fb-8fb91d2e1494
     m_ActionName: 'movement/Interact[/Keyboard/e]'
   - m_PersistentCalls:
@@ -384,6 +360,30 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1f3a6cee-5722-4d25-9f83-22c560d30c73
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d8d822c2-d41c-494d-9101-e9853aa16224
+    m_ActionName: 'movement/TouchPosition[/Simulated Touchscreen/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 570beba0-471b-48b4-9dc4-73ef2400bcfe
+    m_ActionName: 'movement/TouchPress[/Simulated Touchscreen/press]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3432186654830056624}
+        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
+        m_MethodName: OnTouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 55af2717-7641-4677-89e6-0ff9d8936f9c
+    m_ActionName: 'movement/Tapscreen[/Simulated Touchscreen/primaryTouch/tap]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: movement

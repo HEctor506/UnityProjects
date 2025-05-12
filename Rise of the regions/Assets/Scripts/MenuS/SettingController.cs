@@ -4,6 +4,7 @@ public class SettingController : MonoBehaviour
 {
     public GameObject menuCanvas;
 
+
     [Header("btn_clip")]
     [SerializeField] private AudioClip btn_sound;
 
@@ -27,4 +28,5 @@ public class SettingController : MonoBehaviour
         SoundManager.instance.PlaySFX(btn_sound);
         menuCanvas.SetActive(false);
     }
+
 }

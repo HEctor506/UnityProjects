@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: SupervisorDialogue
+  m_EditorClassIdentifier: 
+  npcName: Supervisor
+  npcPortrait: {fileID: 21300000, guid: 30917253e0f873b45975193a8f9b7e6f, type: 3}
+  dialogueLines:
+  - "I want to modernize my family\u2019s farm."
+  - But grandpa only trusts old methods.
+  - Should I just leave the village?
+  - "Mixing both worlds\u2026 that\u2019s a plan worth trying."
+  - "I\u2019ll start with composting and solar irrigation."
+  - Wrong answer...
+  autoProgressLines: 0101010101
+  endDialogueLines: 000000000101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 2
+    choices:
+    - Combine traditional and new sustainable practices.
+    - Abandon the farm. You can't change it.
+    - Convince your grandpa to leave the farm.
+    nextDialogueIndexes: 030000000500000005000000

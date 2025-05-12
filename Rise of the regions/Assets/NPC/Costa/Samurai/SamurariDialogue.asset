@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: SamurariDialogue
+  m_EditorClassIdentifier: 
+  npcName: Samurai
+  npcPortrait: {fileID: 21300000, guid: 14d0eef76b41c6f46a38b382aab72ff9, type: 3}
+  dialogueLines:
+  - "The tourists keep coming\u2014more every season."
+  - "It brings jobs, but it\u2019s also hurting the coast."
+  - I see plastic near the mangroves and turtles avoiding the beach.
+  - Should we slow down tourism, or find another way?
+  - Correct!!
+  - 'Sets up the eco-tourism solution '
+  - 'Short-term thinking '
+  - ignores urgency
+  autoProgressLines: 01010101010101
+  endDialogueLines: 0000000000010101
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 3
+    choices:
+    - There has to be a way to balance income and impact.
+    - Tourism pays the bills. The rest can wait
+    - The beach will recover eventually.
+    nextDialogueIndexes: 040000000600000007000000

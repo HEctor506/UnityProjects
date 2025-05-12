@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: GuardDialogue
+  m_EditorClassIdentifier: 
+  npcName: Guard
+  npcPortrait: {fileID: 21300000, guid: a830f18493f480c49a7ebdb27a2dbc9d, type: 3}
+  dialogueLines:
+  - Gold mining poisoned the river we use for healing.
+  - "Children are getting rashes. We\u2019re scared."
+  - Is there a way to stop this?
+  - "Sustainable mining far from rivers\u2026 that\u2019s hope."
+  - Maybe the youth will lead the change.
+  - Incorrect!!
+  autoProgressLines: 010101010101
+  endDialogueLines: 000000000101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 2
+    choices:
+    - Promote legal and clean mining practices elsewhere.
+    - Ask the miners to clean it.
+    - Leave the area.
+    nextDialogueIndexes: 030000000500000005000000

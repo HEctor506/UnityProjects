@@ -9,13 +9,22 @@ public class InstanciarPlayer : MonoBehaviour
 
     void Awake()
     {
+        CinemachineConfiner2D confiner = FindAnyObjectByType<CinemachineConfiner2D>();
         Personajes personajeSeleccionado = GameManager.Instance.ObtenerPersonajeSeleccionado();
+
+        PolygonCollider2D mapBoundary = confiner.BoundingShape2D as PolygonCollider2D;
+        if(mapBoundary == null)
+        {
+            Debug.LogError("El boundingshape 2d no es polygonCollider");
+        }
+
+        Vector3 startPosition = mapBoundary.bounds.center;
 
         if (personajeSeleccionado != null && personajeSeleccionado.peronajeJugable != null)
         {
                 jugador = Instantiate(
                 personajeSeleccionado.peronajeJugable,
-                Vector3.zero,
+                startPosition,
                 Quaternion.identity
             );
 
@@ -34,13 +43,12 @@ public class InstanciarPlayer : MonoBehaviour
         }
         
         // Ahora sí puedes llamar LoadGame porque ya existe el personaje
-        saveController.LoadGame();
+        // saveController.LoadGame();
     }
 
     // void Start()
     // {
-    //     playerMovement jugadorScript = jugador.GetComponent<playerMovement>();
-    //     jugadorScript.movementJoystick 
+    //     string mapBoundary = FindAnyObjectByType<CinemachineConfiner2D>().BoundingShape2D.gameObject.name;
 
     // }
 }

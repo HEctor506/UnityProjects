@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: VigilanteDialogue
+  m_EditorClassIdentifier: 
+  npcName: Vigilante
+  npcPortrait: {fileID: 21300000, guid: 6f539bafd8cc68b4d9a0c7822ff5aa31, type: 3}
+  dialogueLines:
+  - That river used to be our lifeline.
+  - We drank from it, cooked with it, even bathed the children.
+  - "But now it\u2019s brown, and the smell makes people sick."
+  - "We don\u2019t have many options left."
+  - "What should we do\u2014find a new source or try to clean it ourselves?"
+  - Good answer!!
+  - Encourages caution and resilience
+  - Minimizes the problem, but it does not solve it
+  - Overconfidence in boiling
+  autoProgressLines: 010101010101010101
+  endDialogueLines: 000000000000010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 4
+    choices:
+    - "It\u2019s probably just mud. It'll clear up."
+    - We need to find safer water and treat what we have.
+    - Just keep boiling it. That should be enough.
+    nextDialogueIndexes: 070000000500000008000000

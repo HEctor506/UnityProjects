@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: BoyDialogue
+  m_EditorClassIdentifier: 
+  npcName: Boy
+  npcPortrait: {fileID: 21300000, guid: 626f093a38cf89a418a22368fb314150, type: 3}
+  dialogueLines:
+  - The farm has fed our family for generations.
+  - "But it\u2019s harder now\u2014less rain, rising costs."
+  - I want to innovate, but grandpa says the old ways worked fine.
+  - Should I push for change or just walk away?
+  - That's right...  Encourages balance
+  - Promotes abandonment
+  - Avoids action
+  autoProgressLines: 010101010101
+  endDialogueLines: 00000000010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 3
+    choices:
+    - The old ways are holding you back. Leave.
+    - Maybe you can combine old wisdom with new ideas.
+    - Just wait for your grandpa to retire.
+    nextDialogueIndexes: 050000000400000006000000

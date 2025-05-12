@@ -1,0 +1,1 @@
+C:\Users\HECTOR\Documents\GitHub\UnityProjects\Rise of the regions\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\3q6723w1\obj\arm64-v8a

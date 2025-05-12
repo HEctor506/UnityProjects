@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cc74850399ad349816b39c12b11d38, type: 3}
+  m_Name: robotDialogue
+  m_EditorClassIdentifier: 
+  npcName: robot
+  npcPortrait: {fileID: 21300000, guid: d68639c60f8134245bbcf3edf1f2f6e6, type: 2}
+  dialogueLines:
+  - Strangers come and cut trees at night.
+  - The forest cries, and our animals flee.
+  - How should we respond?
+  - Protecting with wisdom and allies. That is our strength.
+  - "I\u2019ll speak to the elders about forest guardians."
+  - Incorrect
+  autoProgressLines: 01010101
+  endDialogueLines: 000000000101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 5ca158e913ab61b4b87acfe13e046952, type: 3}
+  voicePich: 1
+  choices:
+  - dialogueIndex: 2
+    choices:
+    - "Ignore them, they\u2019ll leave."
+    - Report and create forest patrols with allies.
+    - Set traps for them.
+    nextDialogueIndexes: 050000000300000005000000
